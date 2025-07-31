@@ -1,36 +1,36 @@
-// --- Part 1: Login & Access Control ---
-
-let username = prompt("Enter your username (admin/user):");
-let password = prompt("Enter your password:");
-
+// *section One: Login & Access...
+let username = prompt("Enter your Username (Admin or User):");
+let password = prompt("Enter your Password:");
 let role = "";
 let securityLevel = "";
 
-if ((username === "admin" || username === "user") && password === "1234") {
+if ((username === "admin" || username === "user") && password === "12345678") {
     
   if (username === "admin") {
     role = "admin";
     securityLevel = "high";
-    alert("Welcome admin! Your access is " + securityLevel)
+    alert("Welcome Admin! Your access is " + securityLevel)
   } else {
     role = "user";
     securityLevel = "low";
-    alert("Welcome user! Your access is " + securityLevel)
+    alert("Welcome User! Your access is " + securityLevel)
   }
 
 } else {
-  alert("Invalid username and password!");
+  alert("Invalid Username and Password!");
 }
 
-// Part 2: Coffee Shop Order Calculator 
 
-let Name = prompt("What is your name?");
-let age = Number(prompt("Enter your age:"));
-let coffeeType = prompt("Choose your coffee (espresso, latte, cappuccino):");
-let quantity = Number(prompt("How many cups do you want?"));
 
-// Set price per cup
+//*Section Two: Coffee Order Calculator... 
+let Name = prompt("What is your Name?");
+let age = Number(prompt("Enter your Age please :"));
+let coffeeType = prompt("Choose your coffee fom the chart > (Espresso, Latte, Cappuccino):");
+let quantity = Number(prompt("How many cups would you like to order?"));
 
+
+
+//*Set Price For Each Cup...
 let pricePerCup = 0;
 if (coffeeType === "espersso") {
   pricePerCup = 2.5;
@@ -42,8 +42,9 @@ if (coffeeType === "espersso") {
   alert("Invalid coffee type.")
 }
 
-// Calculate totals
 
+
+//*Calculate-Totals...
 let originalTotal = pricePerCup * quantity;
 let discount = 0;
 if (age < 18 || age > 60) {
@@ -51,17 +52,18 @@ if (age < 18 || age > 60) {
 }
 let finalTotal = originalTotal - discount;
 
-// Part 3: Bill Splitter wit tip
 
-let numPeople = Number(prompt("ow many people are splitting the bill? (1, 2 or 3)"));
+
+//*Section Three: Bill-Splitter-Wit-Tip...
+let numPeople = Number(prompt("oh! There are lots of people splitting the bill? (1, 2, 3, 4 or 5)"));
 let tipPercent = Number(prompt("ENter tip percentage (0, 5, 10 or 15):"));
-
 let tipAmount = finalTotal * (tipPercent / 100);
 let totalWithTip = finalTotal + tipAmount;
 let amountPerPerson = totalWithTip / numPeople;
 
-// Output
 
+
+//*Final-Allert-Output...
 alert(`
   Hello ${Name}!
   You ordered ${quantity} ${coffeeType}(s)
@@ -69,9 +71,22 @@ alert(`
   Discount: $${discount.toFixed(2)}
   Tip: $${tipAmount.toFixed(2)}
   Total with tip: $${totalWithTip.toFixed(2)}
-  Split between ${numPeople} people $${amountPerPerson.toFixed(2)} each `);
+  Split between: ${numPeople} people $${amountPerPerson.toFixed(2)} each `);
 
-//   It has problems I must work on it
-//   console.log(
-//     Hello: Zahra \n You ordered: Esperso  \n Orginal total: 1 \n Discount: 10% \n  Tip: 000 \n  Total with tip: 000 \n Split between people: "...."
-//   )
+
+  
+//*Final-Allert-Output-Example-ON-Console... 
+   const nameEx = "Zahra";
+   const typeOrder = "Cappuccino";
+   const origTotal = 20;
+   const disc = "20%";
+   const tp = null;
+   const totalTp = null;
+   const splitBet = null;
+   console.log(`Hello: ${nameEx}`);
+   console.log(`You ordered: ${typeOrder}`);
+   console.log(`Orginal total: ${origTotal}`);
+   console.log(`Discount: ${disc}`);
+   console.log(`Tip: ${tp}`);
+   console.log(` Total with tip: ${totalTp}`);
+   console.log(`Split between: ${plitBet}`); 
