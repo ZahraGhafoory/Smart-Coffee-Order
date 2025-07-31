@@ -88,5 +88,5 @@ alert(`
    console.log(`Orginal total: ${origTotal}`);
    console.log(`Discount: ${disc}`);
    console.log(`Tip: ${tp}`);
-   console.log(` Total with tip: ${totalTp}`);
-   console.log(`Split between: ${plitBet}`); 
+   console.log(`Total with tip: ${totalTp}`);
+   console.log(`Split between: ${splitBet}`); 
