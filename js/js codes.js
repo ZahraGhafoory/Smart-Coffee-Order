@@ -1,12 +1,12 @@
 // *section One: Login & Access...
-let username = prompt("Enter your Username (Admin or User):");
-let password = prompt("Enter your Password:");
+let username = prompt('Enter your Username "Admin or User" :');
+let password = prompt("Enter your Password :");
 let role = "";
 let securityLevel = "";
 
-if ((username === "admin" || username === "user") && password === "12345678") {
+if ((username === "Admin" || username === "User") && password === "12345678") {
     
-  if (username === "admin") {
+  if (username === "Admin") {
     role = "admin";
     securityLevel = "high";
     alert("Welcome Admin! Your access is " + securityLevel)
@@ -22,9 +22,11 @@ if ((username === "admin" || username === "user") && password === "12345678") {
 
 
 
+//TRY AGAIN...
+
 //*Section Two: Coffee Order Calculator... 
 let Name = prompt("What is your Name?");
-let age = Number(prompt("Enter your Age please :"));
+let age = Number(prompt("Please enter your age:"));
 let coffeeType = prompt("Choose your coffee fom the chart > (Espresso, Latte, Cappuccino):");
 let quantity = Number(prompt("How many cups would you like to order?"));
 
@@ -32,11 +34,11 @@ let quantity = Number(prompt("How many cups would you like to order?"));
 
 //*Set Price For Each Cup...
 let pricePerCup = 0;
-if (coffeeType === "espersso") {
+if (coffeeType === "Espersso") {
   pricePerCup = 2.5;
-} else if (coffeeType === "latte") {
+} else if (coffeeType === "Latte") {
   pricePerCup = 3.5;
-} else if (coffeeType === "cappuccino") {
+} else if (coffeeType === "Cappuccino") {
   pricePerCup = 4.0;
 } else {
   alert("Invalid coffee type.")
@@ -55,8 +57,8 @@ let finalTotal = originalTotal - discount;
 
 
 //*Section Three: Bill-Splitter-Wit-Tip...
-let numPeople = Number(prompt("oh! There are lots of people splitting the bill? (1, 2, 3, 4 or 5)"));
-let tipPercent = Number(prompt("ENter tip percentage (0, 5, 10 or 15):"));
+let numPeople = Number(prompt('Oh! There are lots of people splitting the bill? "1, 2, 3, 4 or 5" '));
+let tipPercent = Number(prompt('Enter tip percentage "0, 5, 10 or 15" :'));
 let tipAmount = finalTotal * (tipPercent / 100);
 let totalWithTip = finalTotal + tipAmount;
 let amountPerPerson = totalWithTip / numPeople;
@@ -76,6 +78,7 @@ alert(`
 
   
 //*Final-Allert-Output-Example-ON-Console... 
+  console.log(`How can I make sure I ordered successfully ?\nThis is an example for you!\nIf you recive a messege like this while ordering your coffee, it means you have ordered successfully. `)
    const nameEx = "Zahra";
    const typeOrder = "Cappuccino";
    const origTotal = 20;
